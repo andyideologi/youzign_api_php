@@ -1,9 +1,22 @@
 <?php
 /*
-
+ SIMPLIFIED EXAMPLE BY : ANDYWITHPHP
 */
 
-
+/*
+STEPS..........................................
+1. Crate an account on : https://youzign.com/ and log in.
+2. After sucessfull account creation, you will get
+    API key And Hash Kay. (Keys will be available on : https://youzign.com/profile/)
+3. Create the list by clicking on new design button.  
+4. Now you can go through the code to get,
+        a) user profile details
+        b) verify keys
+        c) get design list and details.
+   
+   - WE HAVE TO INTERACT WITH API USING CLIENT URL ONLY.   
+   You should refer "https://youzign.readme.io/v1.0/docs" to interact with Youzign API.   
+*/
 if( ( isset($_POST['add_youzign']) )  &&  ( $_POST['add_youzign'] !== "") ){
 
      $youzign_token= $_POST['youzign_token']; 
