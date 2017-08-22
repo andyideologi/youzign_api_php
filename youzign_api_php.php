@@ -1,6 +1,7 @@
 <?php
 /*
  SIMPLIFIED EXAMPLE BY : ANDYWITHPHP
+<<<<<<< HEAD
 */
 
 /*
@@ -18,6 +19,24 @@ STEPS..........................................
    You should refer "https://youzign.readme.io/v1.0/docs" to interact with Youzign API.   
 */
 if( ( isset($_POST['add_youzign']) )  &&  ( $_POST['add_youzign'] !== "") ){
+=======
+*/
+/*
+STEPS..........................................
+1. Crate an account on : https://youzign.com/ and log in.
+2. After sucessfull account creation, you will get
+    API keys And Token Kay. (Keys will be available on 'https://youzign.com/profile/')
+3. Create the new design by clicking on new design button and save those designs.  
+4. Now you can go through the code to get a) user profile details, b) design details c) verify keys.
+   
+   - WE HAVE TO INTERACT WITH API USING CLIENT URL ONLY.   
+   You should refer "https://youzign.readme.io/v1.0/docs" to interact with Sendlane API.   
+*/
+
+// below is the example where i have posted two values as KEY and TOKEN. 
+
+if( ( isset($_POST['add_youzign']) )  &&  ( $_POST['add_youzign'] !== "") ){ 
+>>>>>>> origin/master
 
      $youzign_token= $_POST['youzign_token']; 
      $youzign_key= $_POST['youzign_key']; 
@@ -66,7 +85,10 @@ if( ( isset($_POST['add_youzign']) )  &&  ( $_POST['add_youzign'] !== "") ){
 			
                        echo "<pre>";
                        print_r($result);
-                       echo "count:".count($result);
+                       $count=count($result);
+                       for($i=0; $i < $count; $i++){
+                           echo $result[$i]->link;  // here you will get links of all the designs created on youzign
+                        }
                        //..................................
 
                       // get user profile details......
